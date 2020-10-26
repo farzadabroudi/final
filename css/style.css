@@ -1,26 +1,109 @@
-html{
-    font: .9rem;
-}
-@media (min-width:768px){
-    html{
-        font-size: 1rem;
-    }
-}
 body{
     font-family: vazir;
+}
+a{
+    color: #e38cb7;
+}
+a:hover,
+a:focus{
+    color: #d6619c;
+}
+h1{
+    font-size: 60px;
     font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
 }
-.container{
-    max-width: 960px;
+h2{
+    font-size: 45px;
+    font-weight: 300;
+    color: #633991;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+}
+.btn{
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0.37rem 1.35rem;
+    transition: all .3s ease;
+}
+.btn-outline-light:hover{
+    color: #d6619c;
+}
+/*------------------------------------
+            Navbar
+------------------------------------*/
+.nav-menu{
+    padding: 1rem 0;
+    transition: all .3s ease;
 }
 
-.box-shadow{
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.nav-menu.scrolling,
+.nav-menu.menu-is-open{
+    background-color: rgb(74, 13, 143);
+    background: linear-gradient(135deg,rgb(74,13,143)0%,rgb(250,42,143)100%);
+    box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+}
+.nav-menu.scrolling{
+    padding: 0;
+}
+.navbar-nav .nav-link{
+    position: relative;
+}
+@media(min-width:992px){
+    .navbar-expand-lg .navbar-nav .nav-link{
+        font-size: 14px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link.active::after{
+    content: "";
+    border-bottom: 2px solid #cd99d4;
+    left: 1rem;
+    right: 1rem;
+    bottom: 5px;
+    position: absolute;
+    }
+}
+@media(max-width:991px){
+    .navbar-nav .nav-item{
+            text-align: center;
+    }
+}
+/*------------------------------------
+            header
+------------------------------------*/
+header{
+        padding: 100px 0 0;
+        text-align: center;
+        color: #fff;
 }
 
-.pricing-header{
-    max-width: 700px;
+.bg-gradient{
+    background-image: linear-gradient(135deg, rgba(60,8,118,.8) 0%,rgba(250,0,118,.8)100%);
 }
-.card-deck .card{
-    min-width: 220px;
+
+.tagline{
+    font-size: 23px;
+    font-weight: 300;
+    color: #ffb8f6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.img-holder{
+    height: 0;
+    padding-bottom: 31%;
+    overflow: hidden;
+}
+
+@media (max-width:1200px){
+    .img-holder{
+        padding-bottom: 50%;
+    }
+}
+@media (max-width:767px){
+    .img-holder{
+        padding-bottom: 100%;
+    }
 }
